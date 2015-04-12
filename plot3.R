@@ -2,7 +2,7 @@
 library(ggmap)
 library(ggplot2)
 # DATA WRANGLING ####
-d1 <- read.csv('household_power_consumption.txt', sep=";", header=TRUE)
+d1 <- read.csv('household_power_consumption.txt', sep=";", header=TRUE, stringsAsFactors=FALSE)
 d1$Date <- as.Date(d1$Date,"%d/%m/%Y")
 d1$Sub_metering_1 <- as.integer(d1$Sub_metering_1) 
 d1$Sub_metering_2 <- as.integer(d1$Sub_metering_2) 
